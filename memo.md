@@ -1,7 +1,7 @@
 # Memo & Planejamento do Projeto
 
 ## Visão Geral
-Projeto de coleta e análise de dados de e-commerce com agentes de IA locais (Ollama), armazenamento em Firebase, ETL para data warehouse e dashboard com Streamlit.
+Projeto de coleta e análise de dados de e-commerce com agentes de IA locais (Ollama) e https://docs.crawl4ai.com/, armazenamento em Firebase, ETL para data warehouse e dashboard com Streamlit.
 
 ## Status Atual
 - Estrutura de pastas e módulos criada
