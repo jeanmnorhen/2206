@@ -15,12 +15,11 @@ scraper = EcommerceScraper()
 def scrape_offers():
     if request.method == 'GET':
         term = request.args.get('term')
-        # Exemplo: montar uma URL de busca a partir do termo
-        # Aqui você pode definir um template de URL de e-commerce para busca
         if not term:
             return jsonify({'error': 'Missing term parameter'}), 400
-        # Exemplo de URL de busca (ajuste conforme necessário)
-        search_url = f"https://www.google.com/search?q={term}"
+        # Monta a URL da Extra usando o termo como categoria
+        # Exemplo: /scrape?term=tv => https://www.extra.com.br/tv/b
+        search_url = f"https://www.extra.com.br/{term}/b"
         result = scraper.extract_product_data(search_url)
         offers = []
         if result:
