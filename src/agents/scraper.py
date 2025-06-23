@@ -1,10 +1,10 @@
-from langchain.llms import Ollama
+from langchain_community.llms import Ollama
 from bs4 import BeautifulSoup
 import requests
 
 class EcommerceScraper:
     def __init__(self):
-        self.llm = Ollama(model="llama2")  # or your preferred model
+        self.llm = Ollama(model="deepseek-coder:instruct", base_url="http://192.168.0.56:11434")
         
     def extract_product_data(self, url):
         """Extract product data from a given URL using AI assistance"""
