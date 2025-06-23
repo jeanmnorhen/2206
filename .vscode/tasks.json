@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Install Dependencies",
+            "type": "shell",
+            "command": "pip install -r requirements.txt",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Data Collection",
+            "type": "shell",
+            "command": "python src/main.py collect",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run ETL Process",
+            "type": "shell",
+            "command": "python src/main.py etl",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Dashboard",
+            "type": "shell",
+            "command": "python src/main.py dashboard",
+            "problemMatcher": []
+        }
+    ]
+}
