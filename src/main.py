@@ -15,6 +15,9 @@ def main():
     dashboard = Dashboard()
     
     # Add your main logic here
-    
+def save_products(firebase_client, products):
+    for product in products:
+        firebase_client.save_product(product)
+           
 if __name__ == "__main__":
     main()
