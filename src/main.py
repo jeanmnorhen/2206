@@ -13,7 +13,14 @@ def main():
     scraper = EcommerceScraper()
     etl = ETLProcessor()
     dashboard = Dashboard()
-    
+
+    term = os.getenv("TERM")  # Replace this with the actual term you want to use for scraping
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'}
+    scraper = EcommerceScraper(term)
+    firebase_client = FirebaseClient()
+
+    products = scraper.extract_products(headers)  # Calling the newly implemented function to extract products
+
     # Add your main logic here
 def save_products(firebase_client, products):
     for product in products:
