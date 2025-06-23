@@ -17,8 +17,7 @@ def scrape_offers():
         term = request.args.get('term')
         if not term:
             return jsonify({'error': 'Missing term parameter'}), 400
-        # Monta a URL da Extra usando o termo como categoria
-        # Exemplo: /scrape?term=tv => https://www.extra.com.br/tv/b
+        # Monta a URL da Extra usando o termo (ex: 'tv' -> https://www.extra.com.br/tv/b)
         search_url = f"https://www.extra.com.br/{term}/b"
         result = scraper.extract_product_data(search_url)
         offers = []
